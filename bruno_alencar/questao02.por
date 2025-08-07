@@ -1,18 +1,18 @@
 programa
 {
-	/*2) Desenvolva um algoritmo que leia 10 números inteiros (podem ser gerados aleatoriamente) e armazene-os 
+/*2) Desenvolva um algoritmo que leia 10 números inteiros (podem ser gerados aleatoriamente) e armazene-os 
 	num vetor. A partir desse vetor, monte dois vetores separados:um com todos os números pares;
 outro apenas com os números ímpares.
 Ao final, exiba:os vetores de pares e de ímpares;a quantidade de elementos em cada um.*/
-	
-	inclua biblioteca Util --> u
+
+inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
 		inteiro lista[10]
 
 		para(inteiro i=0; i < 10; i++){
-			lista[i] = u.sorteia(0, 20)
+			lista[i] = u.sorteia(1, 20)
 		}
 
 		verificador(lista)
@@ -29,26 +29,18 @@ Ao final, exiba:os vetores de pares e de ímpares;a quantidade de elementos em c
 				impar[i] = lista[i]
 				impares++
 			}}
-		
+
+		escreva("Existem "+pares+" pares e "+impares+" impares.\n")
 		para(inteiro i=0; i < 10; i++){
 			se(par[i] % 2 ==0 e par[i] != 0){
-				escreva("Par:"+par[i]+"\t")
+				escreva("Par:"+par[i]+"\n")
 			}}
 		
 		para(inteiro i=0; i < 10; i++){
-			se(impar[i] % 2 ==0 e impar[i] != 0){
-				escreva("Impar:"+impar[i]+"\t")
+			
+			se(impar[i] % 2 !=0 e impar[i] != 0){
+				escreva("Impar:"+impar[i]+"\n")
 			}}
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 789; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
+
